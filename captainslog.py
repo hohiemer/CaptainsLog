@@ -21,11 +21,16 @@ if token:
     timestamp = int(time.time()) - 86400
 
     results = sp.current_user_recently_played(limit=50, after=timestamp)
+
+    if len(results) == 0:
+        sys.exit()
+
     uri_list = []
     for i, item in enumerate(results['items']):
         uri_list.append(item['track']['uri'])
 
-    chosentrack = uri_list[random.randint(0,49)]
+    max_index = len(uri_list)
+    chosentrack = uri_list[random.randint(0,max_index)]
     chosentrack_id = []
     chosentrack_id.append(chosentrack.replace("spotify:track:", ""))
 
