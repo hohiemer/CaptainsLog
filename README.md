@@ -19,7 +19,7 @@ Create a new client ID using the [Spotify Developer Dashboard](https://developer
 
 ### Locally
 
-Add your Spotify client ID, client secret, and redirect URI to `captainslog.py`:
+Add your Spotify client ID, client secret, and redirect URI to `captainslog.py` (for local use only):
 
 ```
 token = util.prompt_for_user_token(username, scope, client_id='', client_secret='', redirect_uri='')
@@ -54,5 +54,7 @@ worker python captainslog.py <spotify-username>
 Run the script locally to create `.cache-<spotify-username>`.
 
 Commit `Procfile`, `.cache-<spotify-username>`, `requirements.txt`, and `captainslog.py` and push to Heroku.
+
+Add your Spotify client ID, client secret, and redirect URI as config variables.
 
 Use the Heroku scheduler add-on to schedule the script as desired.
