@@ -48,7 +48,7 @@ After the first run, execute manually or use a cron job to schedule.
 Create `Procfile` and add it to the directory:
 
 ```
-worker python3 captainslog.py <spotify-username>
+worker python captainslog.py <spotify-username>
 ```
 
 Run the script locally to create `.cache-<spotify-username>`.
