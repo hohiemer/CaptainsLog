@@ -18,7 +18,7 @@ if token:
     sp = spotipy.Spotify(auth=token)
     sp.trace = False
 
-    timestamp = int(time.time()) - 86400
+    timestamp = int(round(time.time() * 1000)) - 86400000
 
     results = sp.current_user_recently_played(limit=50, after=timestamp)
 
