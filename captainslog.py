@@ -29,8 +29,7 @@ if token:
     for i, item in enumerate(results['items']):
         uri_list.append(item['track']['uri'])
 
-    max_index = len(uri_list)
-    chosentrack = uri_list[random.randint(0,max_index)]
+    chosentrack = random.choice(uri_list)
     chosentrack_id = []
     chosentrack_id.append(chosentrack.replace("spotify:track:", ""))
 
