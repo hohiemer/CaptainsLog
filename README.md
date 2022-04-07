@@ -1,3 +1,3 @@
 # Captain's Log
 
-A simple script that uses Spotipy to maintain a song-a-day playlist.
+Use Spotipy to maintain a (somewhat) random song-a-day playlist.
